@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
+    <style src="css/styles.css"></style>
 </head>
 
 <body>
@@ -25,11 +26,18 @@
                 </p>
             </div>
         </section>
-        <section>
-<label for="input-amt">Amount</label>
-            <input type="number" name="" id="input-amt" placeholder="Enter amount">
+        <section class="input-area">
+            <label for="input-amt">Amount</label>
+            <input type="number" name="" id="input-amt" placeholder="Enter amount" >
+            <label for="input-description">Description</label>
+            <input type="text" id="input-description" placeholder="Enter description">
+            <button id="add-list-btn">Add Expense</button>
+        </section>
+        <section >
+            <ul id="expense-list"></ul>
         </section>
     </main>
 </body>
+<script src="js/index.js"></script>
 
 </html>
