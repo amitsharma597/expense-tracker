@@ -1,55 +1,75 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const amount = document.getElementById('input-amt');
-    const description = document.getElementById('input-description');
+    const inputAmount = document.getElementById('input-amt');
+    const inputDescription = document.getElementById('input-description');
     const expenseList = document.getElementById('expense-list');
     const addListBtn = document.getElementById('add-list-btn');
-    const deleteBtn = document.getElementsByClassName('delete-btn');
 
+    const loadExpenses = () => {
+        const saved = JSON.parse(localStorage.getItem("expenses")) || [];
+        saved.forEach(expense => {
+            showList(expense.amount, expense.description);
+        });
+    };
 
-    const showList = () => {
+    const saveExpenses = () => {
+        const arr = [];
+        document.querySelectorAll('#expense-list li').forEach(li => {
+            const spans = li.querySelectorAll('span');
+            arr.push({
+                amount: spans[0].innerText,
+                description: spans[1].innerText
+            });
+        });
+        localStorage.setItem("expenses", JSON.stringify(arr));
+    };
 
-    if(amount.value.trim()===""){
-        return;
-    }
+    const showList = (amount, description) => {
+        if (amount === "") return;
+
         const li = document.createElement('li');
-        li.innerHTML =
-            `<span>${amount.value.trim()}</span>
-           <span>${description.value.trim()}</span>
-         <button class = "delete-btn" type="button">delete</button>`;
+        li.innerHTML = `
+            <span>${amount}</span>
+            <span>${description}</span>
+            <button class="delete-btn" type="button">delete</button>
+        `;
 
         expenseList.appendChild(li);
 
-        amount.value = '';
-        description.value = '';
+        inputAmount.value = '';
+        inputDescription.value = '';
 
-        deleteBtn.addEventListener('click', ()=>{
-            expenseList.removeChild(li);
-        })
+        li.querySelector('.delete-btn').addEventListener('click', () => {
+            li.remove();
+            saveExpenses();
+        });
 
-
+        saveExpenses();
     };
 
-    addListBtn.addEventListener('click', showList);
-
-    amount.addEventListener('keypress', (e) => {
-        if (e.key == "Enter") {
-            showList(e);
-        }
-    });
-    description.addEventListener('keypress', (e) => {
-        if (e.key == "Enter") {
-            showList(e);
-        }
+    addListBtn.addEventListener('click', () => {
+        showList(
+            inputAmount.value.trim(),
+            inputDescription.value.trim()
+        );
     });
 
+    inputAmount.addEventListener('keydown', e => {
+        if (e.key === "Enter") {
+            showList(
+                inputAmount.value.trim(),
+                inputDescription.value.trim()
+            );
+        }
+    });
 
+    inputDescription.addEventListener('keydown', e => {
+        if (e.key === "Enter") {
+            showList(
+                inputAmount.value.trim(),
+                inputDescription.value.trim()
+            );
+        }
+    });
 
-
-
-
-
-
-
-
-
+    loadExpenses();
 });
