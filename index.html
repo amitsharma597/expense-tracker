@@ -5,35 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
-    <style src="css/styles.css"></style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <header>
+  <div class="container">
+    <h1>Expense<span>Tracker</span></h1>
+  </div>
+</header>
 
-    </header>
     <main>
         <section>
             <div class="hero">
-                welcome
+                Welcome!
             </div>
             <div class="herosub">
-                manage your expenses
+                Manage your expenses
             </div>
-            <div class="paragraph">
-                <p>
-                    Expense
-                </p>
-            </div>
+            <hr>
         </section>
         <section class="input-area">
             <label for="input-amt">Amount</label>
-            <input type="number" name="" id="input-amt" placeholder="Enter amount" >
+            <input type="number" name="" id="input-amt" placeholder="Enter amount">
             <label for="input-description">Description</label>
             <input type="text" id="input-description" placeholder="Enter description">
             <button id="add-list-btn">Add Expense</button>
         </section>
-        <section >
+        <section>
             <ul id="expense-list"></ul>
         </section>
     </main>

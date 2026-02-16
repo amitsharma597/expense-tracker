@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <span>${amount}</span>
             <span>${description}</span>
             <button class="delete-btn" type="button">delete</button>
+            
         `;
 
         expenseList.appendChild(li);
@@ -42,6 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
             li.remove();
             saveExpenses();
         });
+
+        
 
         saveExpenses();
     };

@@ -1,0 +1,129 @@
+/* ===== Expense Tracker – Professional Minimal Theme ===== */
+
+:root {
+    --bg: #F9FAFB;
+    --card: #FFFFFF;
+    --text-main: #111827;
+    --text-muted: #6B7280;
+    --border: #E5E7EB;
+    --accent: #4F46E5;
+    --accent-hover: #4338CA;
+    --danger: #F43F5E;
+}
+
+/* Global */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg);
+    color: var(--text-main);
+}
+
+/* ===== Header ===== */
+header {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+}
+
+header .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+
+}
+
+header h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+header span {
+    color: var(--accent);
+}
+
+/* Layout */
+main {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+/* Hero Section */
+.hero {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.herosub {
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--text-muted), transparent);
+    margin: 18px 0;
+   
+}
+
+/* Input Area */
+.input-area {
+    background: var(--card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    max-width: 400px;
+    margin: 40px 40px 20px 40px;
+
+}
+
+/* Labels & Inputs */
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.65rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-size: 0.95rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* Button */
+#add-list-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#add-list-btn:hover {
+    background-color: var(--accent-hover);
+}
+
