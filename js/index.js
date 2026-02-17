@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         li.innerHTML = `
             <span>${amount}</span>
             <span>${description}</span>
-            <button class="delete-btn" type="button">delete</button>
+            <button class="delete-btn" type="button">Delete</button>
             
         `;
 
