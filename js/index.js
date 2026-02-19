@@ -2,45 +2,45 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputAmount = document.getElementById('input-amt');
     const inputDescription = document.getElementById('input-description');
     const expenseList = document.getElementById('expense-list');
-    const addListBtn = document.getElementById('add-list-btn');
+    const addListBtn = document.getElementById('add-expense-btn');
 
     const loadExpenses = () => {
-        const saved = JSON.parse(localStorage.getItem("expenses")) || [];
-        saved.forEach(expense => {
-            showList(expense.amount, expense.description);
+        const saved = JSON.parse(localStorage.getItem("rows")) || [];
+        saved.forEach(row => {
+            showList(row.amount, row.description);
         });
     };
 
     const saveExpenses = () => {
         const arr = [];
-        document.querySelectorAll('#expense-list li').forEach(li => {
-            const spans = li.querySelectorAll('span');
+        document.querySelectorAll('#expense-list tr').forEach(tr => {
+            const tds = tr.querySelectorAll('td');
             arr.push({
-                amount: spans[0].innerText,
-                description: spans[1].innerText
+                amount: tds[0].innerText,
+                description: tds[1].innerText
             });
         });
-        localStorage.setItem("expenses", JSON.stringify(arr));
+        localStorage.setItem("rows", JSON.stringify(arr));
     };
 
     const showList = (amount, description) => {
         if (amount === "") return;
 
-        const li = document.createElement('li');
-        li.innerHTML = `
-            <span>${amount}</span>
-            <span>${description}</span>
-            <button class="delete-btn" type="button">Delete</button>
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${amount}</td>
+            <td>${description}</td>
+            <td><button class="delete-btn" type="button">Delete</button></td>
             
         `;
 
-        expenseList.appendChild(li);
+        expenseList.appendChild(row);
 
         inputAmount.value = '';
         inputDescription.value = '';
 
-        li.querySelector('.delete-btn').addEventListener('click', () => {
-            li.remove();
+        row.querySelector('.delete-btn').addEventListener('click', () => {
+            row.remove();
             saveExpenses();
         });
 

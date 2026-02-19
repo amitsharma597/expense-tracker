@@ -30,10 +30,21 @@
             <input type="number" name="" id="input-amt" placeholder="Enter amount">
             <label for="input-description">Description</label>
             <input type="text" id="input-description" placeholder="Enter description">
-            <button id="add-list-btn">Add Expense</button>
+            <button id="add-expense-btn">Add Expense</button>
         </section>
         <section>
-            <ul id="expense-list"></ul>
+           <table class="table-list">
+            <thead>
+                <tr>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="expense-list">
+
+            </tbody>
+           </table>
         </section>
     </main>
 </body>
