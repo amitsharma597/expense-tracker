@@ -10,10 +10,10 @@
 
 <body>
     <header>
-  <div class="container">
-    <h1>Expense<span>Tracker</span></h1>
-  </div>
-</header>
+        <div class="container">
+            <h1>Expense<span>Tracker</span></h1>
+        </div>
+    </header>
 
     <main>
         <section>
@@ -33,18 +33,20 @@
             <button id="add-expense-btn">Add Expense</button>
         </section>
         <section>
-           <table class="table-list">
-            <thead>
-                <tr>
-                    <th>Amount</th>
-                    <th>Description</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="expense-list">
+            <div class="table-wrapper">
+                <table class="table-list">
+                    <thead>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expense-list">
 
-            </tbody>
-           </table>
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
 </body>
