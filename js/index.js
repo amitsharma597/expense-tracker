@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const showList = (amount, description) => {
-        if (amount === "") return;
+        if (amount === "" || description === "") return;
 
         const row = document.createElement('tr');
         row.innerHTML = `
@@ -62,6 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 inputAmount.value.trim(),
                 inputDescription.value.trim()
             );
+            
+            inputDescription.focus();
         }
     });
 
@@ -71,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 inputAmount.value.trim(),
                 inputDescription.value.trim()
             );
+            inputAmount.focus();
         }
     });
 

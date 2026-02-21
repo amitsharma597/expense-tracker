@@ -25,7 +25,7 @@ body {
 header {
     background: var(--card);
     border-bottom: 1px solid var(--border);
-    padding: 1rem 0;
+  
 }
 
 header .container {
@@ -38,7 +38,7 @@ header .container {
 }
 
 header h1 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
@@ -55,7 +55,7 @@ main {
 
 /* Hero Section */
 .hero {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 800;
     text-align: center;
 }
@@ -63,7 +63,7 @@ main {
 .herosub {
     color: var(--text-muted);
     margin-bottom: 10px;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     text-align: center;
 }
 
@@ -80,8 +80,9 @@ hr {
     padding: 1.5rem;
     border-radius: 12px;
     border: 1px solid var(--border);
-    max-width: 400px;
-    margin: 40px 40px 20px 40px;
+    width: 400px;
+    margin: 0 auto;
+   
 
 }
 
@@ -124,6 +125,11 @@ input:focus {
     background-color: var(--accent-hover);
 }
 
+#add-expense-btn:active {
+    transform: scale(0.96);
+}
+
+/* Expense table */
 .table-list {
     width: 100%;
     border-collapse: collapse;
@@ -155,11 +161,13 @@ overflow-y: hidden;
     overflow-y: hidden;
     text-align: center;
     white-space: nowrap;
-    font-weight: 00;
+   
 }
 
 .table-list tbody tr {
     border-bottom: 1px solid #eee;
+    border: 1px solid #eee;
+    border-radius: 8px;
 }
 
 
@@ -170,7 +178,8 @@ overflow-y: hidden;
     border: none;
     padding: 6px 8px;
     cursor: pointer;
-    font-weight: 540;
+    font-weight: 550;
     min-width: 60px;
     font-size: 0.8rem;
 }
+
