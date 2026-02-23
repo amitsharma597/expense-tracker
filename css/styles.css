@@ -36,14 +36,15 @@ header .container {
     justify-content: space-between;
 }
 
-header h1 {
-    font-size: 1.1rem;
+header .container h1{
+    font-size: 1.4rem;
     font-weight: 700;
     margin: 0;
 }
 
-header span {
+header .container span {
     color: var(--accent);
+    
 }
 
 /* Layout */
@@ -54,8 +55,8 @@ main {
 }
 
 /* Hero Section */
-.hero {
-    font-size: 1.8rem;
+.hero1 {
+    font-size: 2.5rem;
     font-weight: 800;
     text-align: center;
 }
@@ -63,7 +64,7 @@ main {
 .herosub {
     color: var(--text-muted);
     margin-bottom: 1rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -137,27 +138,36 @@ input:focus {
 /* Expense table */
 .table-list {
     width: 100%;
-    min-width: 500px; 
+    min-width: 500px;
     border-collapse: collapse;
     background-color: var(--card);
     border-radius: 8px;
     overflow: hidden;
 }
 
-.table-list thead {
+.table-list thead th {
     background: var(--accent);
     color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    padding: 15px;
 }
 
-.table-list th,
-.table-list td {
-    padding: 10px;
+.table-list tbody td {
+    font-size: 1rem;
     text-align: center;
-    font-size: 0.85rem;
+    padding: 10px;
 }
+
+
 
 .table-list tbody tr {
     border-bottom: 1px solid #eee;
+}
+
+
+#table-head {
+    display: none;
 }
 
 /* Delete button */

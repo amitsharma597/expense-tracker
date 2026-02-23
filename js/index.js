@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputDescription = document.getElementById('input-description');
     const expenseList = document.getElementById('expense-list');
     const addListBtn = document.getElementById('add-expense-btn');
+    const tableHead = document.getElementById('table-head');
+    
 
     const loadExpenses = () => {
         const saved = JSON.parse(localStorage.getItem("rows")) || [];
@@ -25,6 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const showList = (amount, description) => {
         if (amount === "" || description === "") return;
+        if (expenseList.children.length === 0){
+            tableHead.style.display = "table-header-group";
+        }
+
 
         const row = document.createElement('tr');
         row.innerHTML = `
@@ -42,6 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
         row.querySelector('.delete-btn').addEventListener('click', () => {
             row.remove();
             saveExpenses();
+             if (expenseList.children.length === 0){
+            tableHead.style.display = "none";
+        }
+
         });
 
         
