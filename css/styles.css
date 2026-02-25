@@ -9,6 +9,17 @@
     --danger: #F43F5E;
 }
 
+.dark {
+    --bg: #111827;
+    --card: #1F2937;
+    --text-main: #F9FAFB;
+    --text-muted: #9CA3AF;
+    --border: #374151;
+    --accent: #6366F1;
+    --accent-hover: #818CF8;
+    --danger: #FB7185;
+}
+
 /* Global */
 * {
     box-sizing: border-box;
@@ -25,18 +36,18 @@ body {
 header {
     background: var(--card);
     border-bottom: 1px solid var(--border);
+    width: 100%;
 }
 
 header .container {
-    max-width: 900px;
-    margin: 0 auto;
+    margin: 0px auto;
     padding: 1rem;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
-header .container h1{
+header .container h1 {
     font-size: 1.4rem;
     font-weight: 700;
     margin: 0;
@@ -44,7 +55,7 @@ header .container h1{
 
 header .container span {
     color: var(--accent);
-    
+
 }
 
 /* Layout */
@@ -83,7 +94,7 @@ hr {
     border: 1px solid var(--border);
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 
 /* Labels & Inputs */
@@ -132,7 +143,7 @@ input:focus {
 /* Table wrapper for mobile scroll */
 .table-wrapper {
     overflow-x: auto;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 /* Expense table */
@@ -162,7 +173,7 @@ input:focus {
 
 
 .table-list tbody tr {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border);
 }
 
 
@@ -179,6 +190,38 @@ input:focus {
     padding: 6px 8px;
     cursor: pointer;
     font-size: 0.75rem;
+}
+
+/* Toggle theme*/
+#toggle-btn {
+    border-radius: 50px;
+    width: 60px;
+    height: 30px;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    box-shadow:  0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.toggle-circle {
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    box-shadow:  0 1px 2px rgba(0, 0, 0, 0.15);
+
+}
+
+body.dark #toggle-btn {
+    background: #4f46e5;
+}
+
+body.dark .toggle-circle {
+    transform: translateX(30px);
 }
 
 /* ===== Responsive ===== */
