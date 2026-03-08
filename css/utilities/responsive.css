@@ -1,0 +1,20 @@
+@media (max-width: 600px) {
+
+    .hero1 {
+        font-size: 1.5rem;
+    }
+
+    .input-area {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1rem;
+    }
+
+    .table-list th,
+    .table-list td {
+        padding: 8px;
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,18 @@
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.hero1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.herosub {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}

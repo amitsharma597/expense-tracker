@@ -1,0 +1,21 @@
+:root {
+    --bg: #F9FAFB;
+    --card: #FFFFFF;
+    --text-main: #111827;
+    --text-muted: #6B7280;
+    --border: #E5E7EB;
+    --accent: #4F46E5;
+    --accent-hover: #4338CA;
+    --danger: #F43F5E;
+}
+
+.dark {
+    --bg: #111827;
+    --card: #1F2937;
+    --text-main: #F9FAFB;
+    --text-muted: #9CA3AF;
+    --border: #374151;
+    --accent: #6366F1;
+    --accent-hover: #818CF8;
+    --danger: #FB7185;
+}

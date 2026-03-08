@@ -1,0 +1,28 @@
+#add-expense-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#add-expense-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+#add-expense-btn:active {
+    transform: scale(0.96);
+}
+
+.delete-btn {
+    background: var(--danger);
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    padding: 6px 8px;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
